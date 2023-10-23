@@ -25,7 +25,23 @@ void FillArray(string[] array)
     }
 }
 
-System.Console.WriteLine("Введите данные: ");
-string[] array = new string[10];
-FillArray(array);
+string[] CreateThreeSymbolsArray(string[] array)
+{
+    string[] newArray = new string[array.Length];
+    int j = 0;
+    for (int i = 0; i < array.Length; i++)
+    {
+        if (array[i].Length <= 3)
+            {
+                newArray[j] = array[i];
+                j++;
+            }
+    }
+    return newArray;
+}
+
+string[] array = new string[6] {"dj4r", "e22", "da9sw", "10y", "w1234", "1j"};
 PrintArray(array);
+
+string[] newArray = CreateThreeSymbolsArray(array);
+PrintArray(newArray);
