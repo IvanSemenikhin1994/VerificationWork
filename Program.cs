@@ -24,7 +24,7 @@ string[] CreateThreeSymbolsArray(string[] array)
     return newArray;
 }
 
-string[] array = new string[6] {"dj4r", "e22", "da9sw", "10y", "w1234", "1j"};
+string[] array = new string[6] {"d4r", "e2d2", "dswf3", "i", "w14", "1j"};
 System.Console.Write($"[{string.Join(", ", array)}]");
 
 System.Console.WriteLine(String.Empty);
