@@ -13,15 +13,8 @@ void PrintArray(string[] array)
     System.Console.WriteLine();
     foreach (string item in array)
     {
-        System.Console.Write(item + " ");
-    }
-}
-
-void FillArray(string[] array)
-{
-    for (int i = 0; i < array.Length; i++)
-    {
-        array[i] = Console.ReadLine()!;
+        //System.Console.Write(String.Join(item + " "));
+        System.Console.Write($"[{string.Join(", ", item)}]");
     }
 }
 
@@ -37,11 +30,14 @@ string[] CreateThreeSymbolsArray(string[] array)
                 j++;
             }
     }
+    Array.Resize(ref newArray, j);
     return newArray;
 }
 
 string[] array = new string[6] {"dj4r", "e22", "da9sw", "10y", "w1234", "1j"};
-PrintArray(array);
+System.Console.Write($"[{string.Join(", ", array)}]");
 
+System.Console.WriteLine(String.Empty);
 string[] newArray = CreateThreeSymbolsArray(array);
-PrintArray(newArray);
+
+System.Console.Write($"[{string.Join(", ", newArray)}]");
