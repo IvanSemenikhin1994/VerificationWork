@@ -8,16 +8,6 @@
 // [“1234”, “1567”, “-2”, “computer science”] → [“-2”]
 // [“Russia”, “Denmark”, “Kazan”] → []
 
-void PrintArray(string[] array)
-{
-    System.Console.WriteLine();
-    foreach (string item in array)
-    {
-        //System.Console.Write(String.Join(item + " "));
-        System.Console.Write($"[{string.Join(", ", item)}]");
-    }
-}
-
 string[] CreateThreeSymbolsArray(string[] array)
 {
     string[] newArray = new string[array.Length];
